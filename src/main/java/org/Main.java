@@ -28,7 +28,7 @@ public class Main {
 
 //    3 A real number with a non-zero fractional part is stored in the variable n.
 //      Create a program that rounds the number n to the nearest integer
-//      and displays the result on the screen.
+//      and displays the result on the screen
 
         System.out.println("Enter double number: ");
         String number = scan.next();
