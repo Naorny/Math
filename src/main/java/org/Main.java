@@ -34,7 +34,7 @@ public class Main {
         String number = scan.next();
         double x = Double.parseDouble(number);
         int y = (int) Math.round(x);
-        System.out.println(y);
+        System.out.println("The nearest integer is " + y);
 
 //    4 Given three variables a, b and c.
 //      Change the values of these variables so that
