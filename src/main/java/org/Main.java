@@ -11,20 +11,26 @@ public class Main {
 //       (for the case when q stores 21 and w stores 8): 21 / 8 = 2 and 5 in the remainder
 
         System.out.print("Enter 1 number: ");
-        double q = scan.nextInt();
+        int q = scan.nextInt();
         System.out.print("Enter 2 number: ");
-        double w = scan.nextInt();
-        double result = q / w + q % w / 100;
-        System.out.println("q / w = " + result);
+        int w = scan.nextInt();
+        int result1 = q / w;
+        int result2 = q - q / w * w;
+        System.out.println("q / w = " + result1);
+        System.out.println("Remainder is " + result2);
 
 //     2 The variable n stores a natural two-digit number.
 //       Create a program that calculates and displays the sum of digits of n.
 
-        System.out.print("Enter two-digit number: ");
+        System.out.print("Enter number: ");
         int n = scan.nextInt();
-        int sum;
-        sum = (n / 10 + (n % 10));
+        int sum = 0;
+        while (n != 0) {
+            sum += n % 10;
+            n /= 10;
+        }
         System.out.println("Sum of digits = " + sum);
+
 
 //    3 A real number with a non-zero fractional part is stored in the variable n.
 //      Create a program that rounds the number n to the nearest integer
@@ -33,8 +39,9 @@ public class Main {
         System.out.println("Enter double number: ");
         String number = scan.next();
         double x = Double.parseDouble(number);
-        int y = (int) Math.round(x);
+        int y = (int) (x); // int y = (int) Math.round(x);
         System.out.println("The nearest integer is " + y);
+
 
 //    4 Given three variables a, b and c.
 //      Change the values of these variables so that
@@ -44,23 +51,20 @@ public class Main {
 //      For example, a=0, b=2, c=5,
 //      then the new values are a=2, b=5 and c=7
 
-
         System.out.print("Enter a number: ");
-        int a = scan.nextInt();
+        int a_old = scan.nextInt();
         System.out.print("Enter b number: ");
-        int b = scan.nextInt();
+        int b_old = scan.nextInt();
         System.out.print("Enter c number: ");
-        int c = scan.nextInt();
-        int temp1 = a + b;
-        a = temp1;
+        int c_old = scan.nextInt();
+        int a;
+        int b;
+        int c;
+        a = a_old + b_old;
         System.out.println("Sum of old values a+b = " + a);
-        int temp4 = temp1 - b;
-        a = temp4;
-        int temp2 = c - temp4;
-        b = temp2;
+        b = c_old - a_old;
         System.out.println("Diff of old values c-a = " + b);
-        int temp3 = temp1 + c;
-        c = temp3;
+        c = a_old + b_old + c_old;
         System.out.println("Sum of old values a+b+c = " + c);
 
         }
