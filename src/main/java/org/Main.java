@@ -19,7 +19,7 @@ public class Main {
         System.out.println("q / w = " + result1);
         System.out.println("Remainder is " + result2);
 
-//     2 The variable n stores a natural two-digit number.
+//     2 The variable n stores a natural number.
 //       Create a program that calculates and displays the sum of digits of n.
 
         System.out.print("Enter number: ");
